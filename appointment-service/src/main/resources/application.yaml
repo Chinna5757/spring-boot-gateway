@@ -1,0 +1,28 @@
+server:
+  port: 7678
+spring:
+  application:
+    name: appointment-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: appointments_db
+logging:
+  level:
+    root: info
+    in.stackroute.appointment-service: debug
+    org.springframework.web.client.RestTemplate: debug
+  pattern:
+    console: "%d{dd/MM/yyy HH:mm:ss} %-5level - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs\appointment-service.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
