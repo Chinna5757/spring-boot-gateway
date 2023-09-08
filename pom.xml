@@ -12,6 +12,7 @@
     <modules>
         <module>appointment-service</module>
         <module>registry-service</module>
+        <module>gateway-service</module>
     </modules>
 
 
